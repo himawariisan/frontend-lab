@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - PeopleForce</title>
+</head>
+<body>
+    <header class="header" align="center">
+        <div class="logo_container">
+            <img src="peopleforce.png" alt="Logo" width="300" height="60">
+            <div class="logo_text">
+                <h1 style="color: rgb(37, 182, 87);">Tech Start-up "PeopleForce"</h1>
+            </div>
+        </div>
+        <p>
+            Automate 80%<b> of your HR tasks</b> with PeopleForce <i>and let </i>
+            <em>your team </em>focus <u>on</u>
+            <span style="color:#2a6;">people</span>.
+        </p>
+        <div class="nav-buttons">
+            <a href="#"><button type="button">Go to My Cabinet</button></a>
+            <a href="#"><button type="button">Register</button></a>
+            <a href="index.html"><button type="button">Go to Home Page</button></a>
+        </div>
+    </header>
+        
+    <nav>
+        <ul>
+            <li><a href="projects.html">Project</a></li>
+            <li><a href="index.html#reviews">Reviews</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2 align="center">Feedback Form</h2>
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <div>
+                    <label for="fullname">Full name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="1" max="120">
+                </div>
+
+                <p>Education:</p>
+                <input type="radio" id="edu1" name="education" value="complete-secondary">
+                <label for="edu1">Complete Secondary</label>
+
+                <input type="radio" id="edu2" name="education" value="incomplete-secondary">
+                <label for="edu2">Incomplete Secondary</label>
+
+                <input type="radio" id="edu3" name="education" value="higher">
+                <label for="edu3">Higher</label>
+
+                <input type="radio" id="edu4" name="education" value="vocational">
+                <label for="edu4">Vocational</label>
+
+                <p>Interests:</p>
+                <input type="checkbox" id="int1" name="interests" value="researcher">
+                <label for="int1">Researcher</label>
+
+                <input type="checkbox" id="int2" name="interests" value="investor">
+                <label for="int2">Investor</label>
+
+                <input type="checkbox" id="int3" name="interests" value="promoter">
+                <label for="int3">Promoter</label>
+
+                <input type="checkbox" id="int4" name="interests" value="government-official">
+                <label for="int4">Government Official</label>
+            </fieldset>
+
+            <p>
+                <label for="purpose">Purpose of feedback:</label>
+                <select id="purpose" name="purpose" required>
+                    <option value="">-- Select --</option>
+                    <option value="cooperation">Cooperation</option>
+                    <option value="ip-violation">Intellectual property violation complaint</option>
+                    <option value="proposal">Proposal</option>
+                    <option value="bug-report">Bug report</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="details">Details:</label><br>
+                <textarea id="details" name="details" rows="6" cols="50" maxlength="500"></textarea>
+            </p>
+
+            <p>
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">I agree to the processing of my personal data</label>
+            </p>
+
+            <p>
+                <button type="submit">Send</button>
+            </p>
+
+        </form>
+    </main>
+    <footer>
+        <address>
+            Address: Ukraine, Kyiv, 15 Velyka Vasylkivska St. <br>
+            Phones: +380 44 123 4567, +380 67 987 6543 <br>
+            Email: info@peopleforce.io
+        </address>
+        <p>&copy; 2026 PeopleForce. All rights reserved.</p>
+    </footer>
+</body>
+</html>

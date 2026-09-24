@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - PeopleForce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="page-feedback">
+    <header class="header" align="center">
+        <div class="logo_container">
+            <img src="peopleforce.png" alt="Logo" width="300" height="60">
+            <div class="logo_text">
+                <h1 style="color: rgb(37, 182, 87);">Tech Start-up "PeopleForce"</h1>
+            </div>
+        </div>
+        <p>
+            Automate 80%<b> of your HR tasks</b> with PeopleForce <i>and let </i>
+            <em>your team </em>focus <u>on</u>
+            <span style="color:#2a6;">people</span>.
+        </p>
+        <div class="nav-buttons">
+            <a href="#"><button type="button">Go to My Cabinet</button></a>
+            <a href="#"><button type="button">Register</button></a>
+            <a href="index.html"><button type="button">Go to Home Page</button></a>
+        </div>
+    </header>
+        
+    <nav>
+        <ul>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="index.html#reviews">Reviews</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2 align="center">Feedback Form</h2>
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <div class="field-fullname">
+                    <label for="fullname">Full name:</label><br>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+
+                <div class="field-email">
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="field-age">
+                    <label for="age">Age:</label><br>
+                    <input type="number" id="age" name="age" min="1" max="120">
+                </div>
+
+                <div class="field-education">
+                    <p>Education:</p>
+                    <label><input type="radio" id="edu1" name="education" value="complete-secondary"> Complete Secondary</label>
+                    <label><input type="radio" id="edu2" name="education" value="incomplete-secondary"> Incomplete Secondary</label>
+                    <label><input type="radio" id="edu3" name="education" value="higher"> Higher</label>
+                    <label><input type="radio" id="edu4" name="education" value="vocational"> Vocational</label>
+                </div>
+
+                <div class="field-interests">
+                    <p>Interests:</p>
+                    <label><input type="checkbox" id="int1" name="interests" value="researcher"> Researcher</label>
+                    <label><input type="checkbox" id="int2" name="interests" value="investor"> Investor</label>
+                    <label><input type="checkbox" id="int3" name="interests" value="promoter"> Promoter</label>
+                    <label><input type="checkbox" id="int4" name="interests" value="government-official"> Government Official</label>
+                </div>
+            </fieldset>
+
+            <div class="field-purpose">
+                <label for="purpose">Purpose of feedback:</label><br>
+                <select id="purpose" name="purpose" required>
+                    <option value="">-- Select --</option>
+                    <option value="cooperation">Cooperation</option>
+                    <option value="ip-violation">Intellectual property violation complaint</option>
+                    <option value="proposal">Proposal</option>
+                    <option value="bug-report">Bug report</option>
+                </select>
+            </div>
+
+            <div class="field-details">
+                <label for="details">Details:</label><br>
+                <textarea id="details" name="details" rows="6" maxlength="500"></textarea>
+            </div>
+
+            <div class="field-consent">
+                <label for="consent">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    I agree to the processing of my personal data
+                </label>
+            </div>
+
+            <div class="field-submit">
+                <button type="submit">Send</button>
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <address>
+            Address: Ukraine, Kyiv, 15 Velyka Vasylkivska St. <br>
+            Phones: +380 44 123 4567, +380 67 987 6543 <br>
+            Email: info@peopleforce.io
+        </address>
+        <p>&copy; 2026 PeopleForce. All rights reserved.</p>
+    </footer>
+</body>
+</html>

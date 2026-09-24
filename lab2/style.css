@@ -1,0 +1,401 @@
+/* Універсальний селектор */
+* {
+    box-sizing: border-box;
+}
+
+/* Селектор елементу */
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+    background-color: #090909;
+    color: #fbffff;
+    line-height: 1.6;
+}
+
+/* Селектор групування */
+h1, h2, h3 {
+    font-family: inherit;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+/* Селектор елементу за наявністю атрибута  */
+input[required],
+select[required] {
+    border-left: 3px solid #D2FF00;
+}
+
+/* Селектор атрибута з частковим входженням значення [атрибут*="значення"] */
+a[href*="linkedin"] {
+    color: #D2FF00;
+    text-shadow: 0 0 8px rgba(210, 255, 0, 0.5);
+    text-decoration: none;
+}
+
+/* Селектор за точним значенням атрибута [атрибут="значення"] */
+input[type="email"] {
+    background-color: #0d0f12;
+}
+
+/* Псевдокласи стану та структурні псевдокласи */
+a:hover {
+    color: #D2FF00;
+}
+
+/* Комбінатор «сусідній сестринський» (+) */
+h2 + p {
+    color: #D2FF00;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* Комбінатор «загальний сестринський» (~) + Колір 2 (RGB) */
+h2 ~ blockquote {
+    background-color: rgba(210, 255, 0, 0.03);
+    border-left: 3px solid rgb(210, 255, 0);
+    padding: 12px 18px;
+    margin: 14px 0;
+    color: #fbffff;
+    box-shadow: inset 0 0 10px rgba(210, 255, 0, 0.06);
+}
+
+/* Псевдоелемент ::first-letter */
+article#about p.goal-description::first-letter {
+    font-size: 180%;
+    font-weight: 700;
+    color: #D2FF00;
+}
+
+
+.header {
+    position: relative;
+    padding: 20px 30px 20px 340px;
+    text-align: right; 
+}
+
+
+.logo_container {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 50;
+    text-align: left;
+}
+
+.logo_container h1 {
+    color: #D2FF00 !important;
+    text-shadow: 0 0 14px rgba(210, 255, 0, 0.45);
+    margin: 6px 0 0 0;
+    font-size: 1.15rem;
+}
+
+/* трансформація логотипа при наведенні */
+.logo_container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 0 10px rgba(210, 255, 0, 0.35));
+}
+
+.logo_container img:hover {
+    transform: rotate(-3deg) scale(1.04);
+}
+
+/* Текст опису справа */
+.header p {
+    color: #fbffff;
+    margin: 0 0 12px 0;
+    text-align: right;
+    max-width: 750px;
+}
+
+/* Контейнер кнопок справа */
+.nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* Кнопки - перехід за 3 властивостями + анімація  */
+.nav-buttons button {
+    padding: 9px 18px;
+    margin: 0;
+    background-color: transparent;
+    border: 1px solid #D2FF00;
+    border-radius: 4px;
+    color: #D2FF00;
+    font-family: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    background-color: #D2FF00;
+    color: #090909;
+    box-shadow: 0 0 16px rgba(210, 255, 0, 0.7);
+    animation: techPulse 1.2s infinite alternate;
+}
+
+@keyframes techPulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+/* комбінатор дочірнього елемента (>) */
+nav > ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 12px 20px;
+    background-color: #0d0f12;
+    border-bottom: 1px solid rgba(210, 255, 0, 0.15);
+}
+
+/* комбінатор "пробіл" (нащадок) */
+nav ul li a {
+    color: #a1a1aa;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #D2FF00;
+    text-shadow: 0 0 10px rgba(210, 255, 0, 0.6);
+}
+
+/* Псевдокласи :first-child та :last-child */
+nav ul li:first-child a {
+    border-left: 2px solid #D2FF00;
+    padding-left: 10px;
+}
+
+nav ul li:last-child a {
+    border-right: 2px solid #D2FF00;
+    padding-right: 10px;
+}
+
+footer {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #060606;
+    border-top: 1px solid rgba(210, 255, 0, 0.2);
+    padding: 26px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 50px;
+    color: #a1a1aa;
+}
+
+footer address {
+    font-family: inherit;
+    font-style: normal;
+    color: #fbffff;
+}
+
+/* сторінка «проєкти» */
+body.page-projects .logo_container {
+    position: fixed;
+    top: 0;
+    left: 20px;
+    z-index: 100; /* Робить шар найвищим */
+}
+
+
+body.page-projects main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 26px;
+    padding: 24px 40px;
+}
+
+body.page-projects h2[align="center"] {
+    grid-column: 1 / -1;
+    color: #D2FF00;
+    text-shadow: 0 0 10px rgba(210, 255, 0, 0.4);
+    margin-bottom: 12px;
+}
+
+/* Картка проєкту */
+.project-card {
+    background-color: #121417;
+    padding: 20px;
+    border-style: solid solid double solid; /* нижня межа подвійна (вверх право низ ліво) */
+    border-color: hsl(220, 70%, 25%);
+    border-width: medium; /* товщина середня */
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Картка проєкту при наведенні */
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(210, 255, 0, 0.12);
+}
+
+/* Назва проєкту */
+.project-card h3 {
+    font-weight: 900;
+    font-size: 1.6em;
+    font-style: italic;
+    color: #D2FF00;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+/* Анімація фото до чорно-білого*/
+.project-card img {
+    align-self: center;
+    border-radius: 4px;
+    filter: grayscale(0%);
+    transition: filter 0.6s ease-in-out;
+}
+
+.project-card img:hover {
+    filter: grayscale(100%);
+}
+
+.project-card p {
+    margin: 0;
+    color: #fbffff;
+    font-weight: 700;
+}
+
+.project-card ul {
+    margin: 0;
+    padding-left: 18px;
+    color: #a1a1aa;
+}
+
+/* Невідвідані посилання */
+body.page-projects a:link {
+    color: darkorange;
+}
+
+/* Відвідані посилання */
+body.page-projects a:visited {
+    color: #71717a;
+}
+
+/* сторінка зворотній зв'язок */
+body.page-feedback main {
+    max-width: 60%;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+body.page-feedback h2 {
+    color: #D2FF00;
+    text-shadow: 0 0 10px rgba(210, 255, 0, 0.4);
+}
+
+/* шикує секції у стовпчик на всю ширину */
+body.page-feedback form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    gap: 20px;
+}
+
+/* містить усі 4 обов'язкові властивості з методички */
+body.page-feedback fieldset {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-around;
+    gap: 16px;
+    background-color: #121417;
+    border: 1px solid rgba(210, 255, 0, 0.25);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+body.page-feedback legend {
+    color: #D2FF00;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 0 8px;
+}
+
+/* Ім'я займає більше вільного місця і рівняється по верху */
+body.page-feedback .field-fullname {
+    flex-grow: 2;
+    align-self: flex-start;
+}
+
+/* Email стискається при потребі швидше */
+body.page-feedback .field-email {
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+/* Вік явно задаю порядок */
+body.page-feedback .field-age {
+    flex-grow: 1;
+    order: 3;
+}
+
+/* розтягуються на окремий повний рядок */
+body.page-feedback .field-education,
+body.page-feedback .field-interests {
+    width: 100%;
+    border-top: 1px dashed rgba(210, 255, 0, 0.2);
+    padding-top: 10px;
+}
+
+/* оформлення полів вводу та кнопки */
+body.page-feedback input[type="text"],
+body.page-feedback input[type="email"],
+body.page-feedback input[type="number"],
+body.page-feedback select,
+body.page-feedback textarea {
+    width: 100%;
+    background-color: #090909;
+    border: 1px solid rgba(210, 255, 0, 0.3);
+    border-radius: 4px;
+    padding: 8px 10px;
+    color: #fbffff;
+    outline: none;
+}
+
+body.page-feedback input:focus,
+body.page-feedback select:focus,
+body.page-feedback textarea:focus {
+    border-color: #D2FF00;
+}
+
+body.page-feedback button[type="submit"] {
+    background-color: #D2FF00;
+    color: #090909;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-self: flex-start; /* Кнопка не розтягується на всю ширину форми */
+}
